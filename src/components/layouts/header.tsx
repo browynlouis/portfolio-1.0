@@ -6,6 +6,8 @@ import { data } from "../../data";
 import { cn, initializeTheme } from "../../utils";
 
 export function Header() {
+  const [open, setOpen] = useState<boolean>(false);
+
   return (
     <header>
       <div className="w-full shadow-sm fixed z-10">
@@ -20,15 +22,31 @@ export function Header() {
           <div className="relative">
             <button
               type="button"
-              title="menu-icon"
+              title="Menu Icon"
               className="flex p-2 flex-col gap-2.5 items-end lg:hidden"
+              onClick={() => {
+                setOpen(!open);
+              }}
             >
-              <div className="w-10 h-[1px] bg-secondary transition-all ease-linear duration-300"></div>
-              <div className="w-[35px] h-[1px] bg-secondary transition-all ease-linear duration-300"></div>
+              <div
+                className={cn(
+                  "w-10 h-[1px] bg-secondary transition-all ease-linear duration-300",
+                  open && "-rotate-45"
+                )}
+              ></div>
+              <div
+                className={cn(
+                  "w-[35px] h-[1px] bg-secondary transition-all ease-linear duration-300",
+                  open && "-rotate-[135deg]"
+                )}
+              ></div>
             </button>
 
             <nav
-              className="absolute bg-grey top-10 p-4 z-10 right-0 scale-0 w-[250px] transition-all ease-linear duration-100 shadow-xl lg:bg-transparent lg:scale-100 lg:relative lg:shadow-none lg:right-0 lg:top-0 lg:p-0 lg:w-auto"
+              className={cn(
+                "absolute bg-grey top-10 p-4 z-10 right-0 scale-0 w-[250px] transition-all ease-linear duration-100 shadow-xl lg:bg-transparent lg:scale-100 lg:relative lg:shadow-none lg:right-0 lg:top-0 lg:p-0 lg:w-auto",
+                open ? "scale-100" : "scale-0"
+              )}
               id="nav"
             >
               <div className="flex flex-col gap-6 lg:gap-4 lg:flex-row">
@@ -42,6 +60,9 @@ export function Header() {
                     className={cn(
                       "btn text-sm relative before:w-0 lg:text-secondary text-capitalize font-semibold cursor-pointer"
                     )}
+                    onClick={() => {
+                      setOpen(false);
+                    }}
                   >
                     {link.name}
                   </Link>
