@@ -1,7 +1,7 @@
 import React from "react";
 import { CaretDoubleDown, ReadCvLogo } from "@phosphor-icons/react";
 
-import { data } from "../../../data";
+import { data } from "../../../utils/data";
 
 export function Hero() {
   return (
@@ -35,9 +35,9 @@ export function Hero() {
             data-aos="fade-up"
             data-aos-duration="2500"
           >
-            <button className="btn" title="Download my resume">
+            <a href="/Resume.pdf" className="btn" title="Download my resume">
               MY RESUME <ReadCvLogo size={18} />
-            </button>
+            </a>
           </div>
         </div>
       </div>

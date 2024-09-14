@@ -1,5 +1,5 @@
-import { data } from "../../../data";
-import { cn, isEven } from "../../../utils";
+import { data } from "../../../utils/data";
+import { cn, isEven } from "../../../utils/helpers";
 
 export function Experiences() {
   return (

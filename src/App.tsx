@@ -8,7 +8,7 @@ import { About } from "./components/pages/home/about";
 import { Experiences } from "./components/pages/home/experiences";
 import { Projects } from "./components/pages/home/projects";
 import { Contact } from "./components/pages/home/contact";
-import { initializeTheme } from "./utils";
+import { initializeTheme } from "./utils/helpers";
 
 function App() {
   useEffect(() => {

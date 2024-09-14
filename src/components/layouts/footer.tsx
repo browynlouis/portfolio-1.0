@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-import { data } from "../../data";
+import { data } from "../../utils/data";
 import { CaretDoubleRight } from "@phosphor-icons/react";
 
 export function Footer() {

@@ -1,7 +1,7 @@
 import { ArrowRight, ArrowUpRight } from "@phosphor-icons/react";
 
-import { cn, isEven } from "../../../utils";
-import { data } from "../../../data";
+import { cn, isEven } from "../../../utils/helpers";
+import { data } from "../../../utils/data";
 
 export function Projects() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { ReadCvLogo } from "@phosphor-icons/react";
 
-import { data } from "../../../data";
+import { data } from "../../../utils/data";
 
 export function About() {
   return (
@@ -32,10 +32,10 @@ export function About() {
             ))}
 
             <div className="mt-10 md:text-right" data-aos="fade-up">
-              <button className="btn" title="Download my resume">
+              <a href="/Resume.pdf" className="btn" title="Download my resume">
                 Download my resume
                 <ReadCvLogo size={18} />
-              </button>
+              </a>
             </div>
           </article>
         </div>

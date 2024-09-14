@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { Moon, Sun } from "@phosphor-icons/react";
 
-import { data } from "../../data";
-import { cn, initializeTheme } from "../../utils";
+import { data } from "../../utils/data";
+import { cn, initializeTheme } from "../../utils/helpers";
 
 export function Header() {
   const [open, setOpen] = useState<boolean>(false);
